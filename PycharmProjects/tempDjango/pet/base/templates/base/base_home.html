@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block content  %}
+    <div class="features">
+        <h2>Мои питомцы</h2>
+        {% if base %}
+            {% for el in base %}
+                <div class="alert alert-warning">
+                    <h2> {{el.name}}</h2>
+                    <p>{{el.breed}}</p>
+                    <p>{{el.age}}</p>
+                    <p>{{el.idshka}}</p>
+                </div>
+            {% endfor %}
+        {%else%}
+            <p>Вы пока не завели питомцев ):</p>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block tolya %}
+{% endblock %}

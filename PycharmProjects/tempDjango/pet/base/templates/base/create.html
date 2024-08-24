@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block tolya %}Форма по добавлению питомца{% endblock %}
+
+{% block content  %}
+    <div class="features">
+        <h2>Форма по добавлению питомца</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.name}}<br>
+            {{ form.breed}}<br>
+            {{ form.age}}<br>
+            {{ form.idshka}}<br>
+            <span> {{ error }}</span>
+            <button class="btn btn-success" type = "submit"> Добавить </button>
+        </form>
+    </div>
+{% endblock %}
+
